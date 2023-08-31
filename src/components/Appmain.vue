@@ -11,10 +11,10 @@ export default {
         };
     },
     created() {
-        this.getPosts();
+        this.getposts();
     },
     methods: {
-        getPosts() {
+        getposts() {
             this.loading = true;
             axios.get(`${this.baseUrl}/api/posts`).then((response) => {
                 console.log(response);
@@ -29,17 +29,36 @@ export default {
     }
 };
 </script>
+
 <template>
     <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    boolfolio
-                </div>
+        <div v-for="post in posts" :key="post.id" class="post-card">
+            <div class="card">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
             </div>
         </div>
+        <div v-if="loading" class="loading">Loading...</div>
     </div>
 </template>
+
 <style scoped>
-/* Add your styles here */
+.post-card {
+    display: inline-block;
+    margin: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.card h2 {
+    margin: 0;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
 </style>

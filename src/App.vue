@@ -5,15 +5,15 @@ export default {
   components: {
     Appmain
   }
-}
+};
 </script>
 
 <template>
   <div>
-    <Appmain />
+    <Appmain></Appmain>
   </div>
 </template>
 
 <style lang="scss">
-@use './styles/generals.scss' as*;
+@use './styles/generals.scss' as *;
 </style>
