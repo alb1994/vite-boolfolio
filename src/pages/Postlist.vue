@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'Appmain',
+    name: 'Postlist',
     data() {
         return {
             baseUrl: 'http://localhost:8000',
