@@ -14,6 +14,7 @@ export default {
                 },
                 {
                     label: 'Categorie',
+                    routeName: 'categories'
                 },
                 {
                     label: 'Contatti',
