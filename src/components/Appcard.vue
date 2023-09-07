@@ -10,6 +10,9 @@
         <div>
             <span v-if="post.category">{{ post.category.name }}</span>
             <span v-else>Categoria non assegnata</span>
+            <Router-Link :to="{ name: 'single-post', params: { slug: post.slug } }">
+                Dattagli
+            </Router-Link>
         </div>
     </div>
 </template>
