@@ -1,6 +1,6 @@
 <template lang="">
-    <div>
-        <p>{{post.title}}</p>
+  <div>
+    <div v-if="post">
         <p>{{post.content}}</p>
         <p>{{post.slug}}</p>
         <p>{{post.tags}}</p>
@@ -9,6 +9,10 @@
         <p>{{post.title}}</p>
         <p>{{post.id}}</p>
     </div>
+    <div v-else>
+      <!-- Handle the case when post is null (e.g., show loading message or error message) -->
+    </div>
+  </div>
 </template>
 <script>
 import axios from 'axios';
